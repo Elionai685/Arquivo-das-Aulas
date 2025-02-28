@@ -1,45 +1,62 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import './App.css'
 import Conversao from './components/Conversao'
 import Conversao2 from './components/Conversao2'
+import Temperatura from './components/Temperatura'
 
 function App() {
-  const [usuario, setUsuario] = useState("Juca")
-  // const [nome, setNome] = useState("Ulib")
+  const [usuario, setUsuario] = useState("Bilu")
   const [senha, setSenha] = useState()
 
-  let nome = "Ulib"
+  // let nome = "Ulib"
+  const [nome, setNome] = useState('Ulib')
   function lerNome(){
-    nome = prompt("Digite o nome (vou ignorar):")
-}
-function lerUsuario(){
-  let resposta = prompt("Digite o novo usuário:")
-  setUsuario(resposta)
-
-  let pw = prompt("Digite a nova senha: ")
-  let pw2 = prompt("Confirme a senha: ")
-  if(pw == pw2){
-    setSenha(pw)
-  }else{
-    alert("As senhas são diferentes")
+    // nome = prompt("Digite o nome (vou ignorar):")
+    setNome(prompt("Digite o nome (vou ignorar):"))
+    console.log(nome);
+    
   }
-}
+  function lerUsuario(){
+    let resposta = prompt("Digite o novo usuário:")
+    setUsuario(resposta)
+
+    let pw = prompt("Digite a nova senha: ")
+    let pw2 = prompt("Confirme a senha: ")
+    if(pw == pw2){
+      setSenha(pw)
+    }else{
+      alert("As senhas são diferentes")
+    }
+
+  }
+
   return (
-  <>
-    <Conversao2 />
-     <Conversao />
+    <>
+      <Temperatura />
+      <Conversao2 />
+      <Conversao />
 
       <h1>ESTADOS</h1>
       Nome: {nome}
       <div>
-        Usuário: {usuario}
+        Usuário: {usuario} <br />
         Senha: {senha}
-        <button onClick={trocarUsuario}>Trocar Usuário</button>
-        <button onClick={trocarNome}>Trocar Nome</button>
       </div>
-      </>
- )  
-}
-  
+      <button onClick={lerNome}>Trocar nome</button>
+      <button onClick={lerUsuario}>Trocar usuário</button>
 
-export default App;
+      <ul>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+        <li>ajshgfkvsf</li>
+      </ul>
+    </>
+  )
+}
+
+export default App
