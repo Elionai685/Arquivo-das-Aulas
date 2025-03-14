@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function Aviso() {
     const [avisar, setAvisar] = useState(false)
   
-    function togleAviso(){
+    function toggleAviso(){
         setAvisar(avisar)
         console.log(avisar);
 

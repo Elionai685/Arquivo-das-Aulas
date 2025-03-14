@@ -3,6 +3,10 @@ import './App.css'
 import Conversao from './components/Conversao'
 import Conversao2 from './components/Conversao2'
 import Temperatura from './components/Temperatura'
+import Anobissexto from './components/Anobissexto'
+import IMC from './components/IMC'
+import Aviso from './components/Aviso'
+import Cronometro from './components/Cronometro'
 
 function App() {
   const [usuario, setUsuario] = useState("Bilu")
@@ -32,6 +36,10 @@ function App() {
 
   return (
     <>
+      <Cronometro />
+      <IMC />
+      <Anobissexto />
+      <Aviso />
       <Temperatura />
       <Conversao2 />
       <Conversao />
